@@ -11,10 +11,10 @@ ELSE
 	
 	PUBLIC cKey AS Character
 	*cKey = '041D-2969' && ACER
-	*cKey = '30D7-5545' && DMA
+	cKey = '30D7-5545' && DMA
 	*cKey = '90D9-B073' && NIRWANA 03-06-2025
 	*cKey = '9CF7-C59A' && DJ 03-06-2025
-	cKey = 'CA3A-9360' && SHAFIRARIYALCIBUBUR 18-06-2025
+	*cKey = 'CA3A-9360' && SHAFIRARIYALCIBUBUR 18-06-2025
 
 	IF ReadSerialDiskDrive('C:\') <> cKey
 		=StrToFile('apps error','temp\error.key',1)

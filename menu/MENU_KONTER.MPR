@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 06/18/25           MENU_KONTER.MPR            15:49:59  
+*       * 06/19/25           MENU_KONTER.MPR            09:40:44  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -125,23 +125,23 @@ ENDIF
 
 DEFINE MENU (m.cMenuName) IN (m.oFormRef.Name) BAR
 
-DEFINE PAD _77k0xxpcg OF (m.cMenuName) PROMPT "Home" COLOR SCHEME 3 ;
+DEFINE PAD _77l0kquak OF (m.cMenuName) PROMPT "Home" COLOR SCHEME 3 ;
 	KEY ALT+H, "" ;
 	SKIP FOR lmenuof
-DEFINE PAD _77k0xxpch OF (m.cMenuName) PROMPT "Menu" COLOR SCHEME 3 ;
+DEFINE PAD _77l0kqual OF (m.cMenuName) PROMPT "Menu" COLOR SCHEME 3 ;
 	KEY ALT+M, "" ;
 	SKIP FOR lmenuof
-ON PAD _77k0xxpcg OF (m.cMenuName) ACTIVATE POPUP (a_menupops[1])
-ON PAD _77k0xxpch OF (m.cMenuName) ACTIVATE POPUP (a_menupops[2])
+ON PAD _77l0kquak OF (m.cMenuName) ACTIVATE POPUP (a_menupops[1])
+ON PAD _77l0kqual OF (m.cMenuName) ACTIVATE POPUP (a_menupops[2])
 
 DEFINE POPUP (a_menupops[1]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[1]) PROMPT "Ganti Password"
 DEFINE BAR 2 OF (a_menupops[1]) PROMPT "Keluar"
 ON SELECTION BAR 1 OF (a_menupops[1]) ;
-	DO _77k0xxpcm ;
+	DO _77l0kquam ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 2 OF (a_menupops[1]) ;
-	DO _77k0xxpcn ;
+	DO _77l0kquan ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 
 DEFINE POPUP (a_menupops[2]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -163,25 +163,25 @@ DEFINE BAR 7 OF (a_menupops[3]) PROMPT "Rekap Per Tanggal"
 DEFINE BAR 8 OF (a_menupops[3]) PROMPT "Rekap Per Bulan"
 DEFINE BAR 9 OF (a_menupops[3]) PROMPT "Rekap Per Tahun"
 ON SELECTION BAR 1 OF (a_menupops[3]) ;
-	DO _77k0xxpco ;
+	DO _77l0kquao ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 2 OF (a_menupops[3]) ;
-	DO _77k0xxpcp ;
+	DO _77l0kquap ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 4 OF (a_menupops[3]) ;
-	DO _77k0xxpcq ;
+	DO _77l0kquaq ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 5 OF (a_menupops[3]) ;
-	DO _77k0xxpcr ;
+	DO _77l0kquar ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 7 OF (a_menupops[3]) ;
-	DO _77k0xxpcs ;
+	DO _77l0kquas ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 8 OF (a_menupops[3]) ;
-	DO _77k0xxpct ;
+	DO _77l0kquat ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 9 OF (a_menupops[3]) ;
-	DO _77k0xxpcu ;
+	DO _77l0kquau ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 
 DEFINE POPUP (a_menupops[4]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -189,13 +189,13 @@ DEFINE BAR 1 OF (a_menupops[4]) PROMPT "Hitung Stok"
 DEFINE BAR 2 OF (a_menupops[4]) PROMPT "Stok Akhir - Total"
 DEFINE BAR 3 OF (a_menupops[4]) PROMPT "Stok Akhir - Riwayat Transaksi Per Mata Uang"
 ON SELECTION BAR 1 OF (a_menupops[4]) ;
-	DO _77k0xxpcv ;
+	DO _77l0kquav ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 2 OF (a_menupops[4]) ;
-	DO _77k0xxpcw ;
+	DO _77l0kquaw ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 ON SELECTION BAR 3 OF (a_menupops[4]) ;
-	DO _77k0xxpcx ;
+	DO _77l0kquax ;
 	IN LOCFILE("\APPMC_DESKTOP\MENU\MENU_KONTER" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU_KONTER?")
 
 ACTIVATE MENU (m.cMenuName) NOWAIT
@@ -208,7 +208,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCM  ON SELECTION BAR 1 OF POPUP home            
+*       * _77L0KQUAM  ON SELECTION BAR 1 OF POPUP home            
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -219,13 +219,13 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcm
+PROCEDURE _77l0kquam
 DO FORM\frm_m_user_password.scx
 
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCN  ON SELECTION BAR 2 OF POPUP home            
+*       * _77L0KQUAN  ON SELECTION BAR 2 OF POPUP home            
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -236,7 +236,7 @@ DO FORM\frm_m_user_password.scx
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcn
+PROCEDURE _77l0kquan
 Tanya = MESSAGEBOX('Keluar dari aplikasi (Yes/No)',4+32,'Tanya')
 IF Tanya = 6
 	IF TYPE('konek') = 'N'
@@ -260,7 +260,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCO  ON SELECTION BAR 1 OF POPUP transaksi       
+*       * _77L0KQUAO  ON SELECTION BAR 1 OF POPUP transaksi       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -271,7 +271,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpco
+PROCEDURE _77l0kquao
 IF TYPE('xUSERGROUP') == 'N'
 	IF xUSERGROUP = 1 .OR. xUSERGROUP = 2
 		DO 'program\cek_closing.prg'
@@ -294,7 +294,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCP  ON SELECTION BAR 2 OF POPUP transaksi       
+*       * _77L0KQUAP  ON SELECTION BAR 2 OF POPUP transaksi       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -305,7 +305,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcp
+PROCEDURE _77l0kquap
 IF TYPE('xUSERGROUP') == 'N'
 	IF xUSERGROUP = 1 .OR. xUSERGROUP = 2
 		DO 'program\cek_closing.prg'
@@ -327,7 +327,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCQ  ON SELECTION BAR 4 OF POPUP transaksi       
+*       * _77L0KQUAQ  ON SELECTION BAR 4 OF POPUP transaksi       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -338,7 +338,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcq
+PROCEDURE _77l0kquaq
 IF TYPE('xUSERGROUP') == 'N'
 	IF xUSERGROUP = 1 .OR. xUSERGROUP = 2
 		mJNSID = 1
@@ -351,7 +351,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCR  ON SELECTION BAR 5 OF POPUP transaksi       
+*       * _77L0KQUAR  ON SELECTION BAR 5 OF POPUP transaksi       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -362,7 +362,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcr
+PROCEDURE _77l0kquar
 IF TYPE('xUSERGROUP') == 'N'
 	IF xUSERGROUP = 1 .OR. xUSERGROUP = 2
 		mJNSID = 2
@@ -375,7 +375,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCS  ON SELECTION BAR 7 OF POPUP transaksi       
+*       * _77L0KQUAS  ON SELECTION BAR 7 OF POPUP transaksi       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -386,7 +386,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcs
+PROCEDURE _77l0kquas
 DO FORM 'form\frm_transaksi_by_date.scx'
 
 
@@ -394,7 +394,7 @@ DO FORM 'form\frm_transaksi_by_date.scx'
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCT  ON SELECTION BAR 8 OF POPUP transaksi       
+*       * _77L0KQUAT  ON SELECTION BAR 8 OF POPUP transaksi       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -405,13 +405,13 @@ DO FORM 'form\frm_transaksi_by_date.scx'
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpct
+PROCEDURE _77l0kquat
 DO FORM 'form\frm_transaksi_by_month.scx'
 
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCU  ON SELECTION BAR 9 OF POPUP transaksi       
+*       * _77L0KQUAU  ON SELECTION BAR 9 OF POPUP transaksi       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -422,13 +422,13 @@ DO FORM 'form\frm_transaksi_by_month.scx'
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcu
+PROCEDURE _77l0kquau
 DO FORM 'form\frm_transaksi_by_year.scx'
 
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCV  ON SELECTION BAR 1 OF POPUP stok            
+*       * _77L0KQUAV  ON SELECTION BAR 1 OF POPUP stok            
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -439,7 +439,7 @@ DO FORM 'form\frm_transaksi_by_year.scx'
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcv
+PROCEDURE _77l0kquav
 IF TYPE('xUSERGROUP') == 'N'
 	IF xUSERGROUP = 1 .OR. xUSERGROUP = 2
 		mTahun = YEAR(DATE())
@@ -457,7 +457,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCW  ON SELECTION BAR 2 OF POPUP stok            
+*       * _77L0KQUAW  ON SELECTION BAR 2 OF POPUP stok            
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -468,7 +468,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcw
+PROCEDURE _77l0kquaw
 IF TYPE('xUSERGROUP') == 'N'
 	IF xUSERGROUP = 1 .OR. xUSERGROUP = 2
 		DO FORM 'form\frm_transaksi_stock.scx'
@@ -481,7 +481,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _77K0XXPCX  ON SELECTION BAR 3 OF POPUP stok            
+*       * _77L0KQUAX  ON SELECTION BAR 3 OF POPUP stok            
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -492,5 +492,5 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _77k0xxpcx
+PROCEDURE _77l0kquax
 DO FORM 'form\frm_transaksi_by_valas.scx'
